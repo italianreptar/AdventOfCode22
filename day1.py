@@ -60,7 +60,6 @@ In case the Elves get hungry and need extra snacks, they need to know which Elf 
 
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 """
-import numpy as np
 
 with open("input1.txt", "r") as fh:
     data = fh.readlines()
@@ -111,4 +110,4 @@ Find the top three Elves carrying the most Calories. How many Calories are
 those Elves carrying in total?
 """
 data = sorted(organized_data, key=sum)
-print(sum(data[-3:]))
+print(sum([sum(item) for item in data[-3:]]))
